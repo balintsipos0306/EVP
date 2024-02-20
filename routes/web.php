@@ -18,5 +18,8 @@ Route::get('/', function () {
 });
 
 Route::get('/asd', function () {
-    return view('welcome');
+    $nev = "Bálint";
+    return view('Hello',[
+        'nev' => $nev
+    ]);
 });
