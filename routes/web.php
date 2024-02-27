@@ -23,3 +23,17 @@ Route::get('/asd', function () {
         'nev' => $nev
     ]);
 });
+
+Route::get('/tombkiiras', function () {
+    $array = ["Lajos", "Béla", "Tibi"];
+    return view('ArrayView',[
+        'tomb' => $array
+    ]);
+});
+
+Route::get('/post/{cim}', function ($cim) {
+    $array = ["Lajos", "Béla", "Tibi"];
+    return view('post',[
+        'nev' =>$array[$cim] ?? "Nincs ilyen név"
+    ]);
+});
