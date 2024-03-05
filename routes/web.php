@@ -14,7 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view(
+        'hello',[
+            'nev' => "Bálint"
+        ]
+
+    );
 });
 
 Route::get('/asd', function () {
@@ -37,3 +42,4 @@ Route::get('/post/{cim}', function ($cim) {
         'nev' =>$array[$cim] ?? "Nincs ilyen név"
     ]);
 });
+
